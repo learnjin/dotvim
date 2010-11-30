@@ -5,8 +5,10 @@ Installation:
 
 Create symlinks:
 
-    ln -s ~/.vimrc/vimrc ~/.vimrc
-    ln -s ~/.vimrc/vimrc ~/.vimrc
+    ln -s ~/.vim/vimrc ~/.vimrc
+    ln -s ~/.vim/gvimrc ~/.gvimrc
+
+
 
 
 
