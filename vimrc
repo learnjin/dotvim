@@ -1,5 +1,5 @@
 " inspirations from:
-" http://github.com/hgimenez/vimfiles/blob/c07ac584cbc477a0619c435df26a590a88c3e5a2/vimrc#L72-122 
+" http://github.com/hgimenez/vimfiles/blob/c07ac584cbc477a0619c435df26a590a88c3e5a2/vimrc#L72-122
 " http://nvie.com/posts/how-i-boosted-my-vim/
 
 """""""""""""""""""""""""""""""""
@@ -9,11 +9,22 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+
+
+"""""""""""""""""""""""""""""""""
+" NEW 
+""""""""""""""""""""""""""""""""""
+set formatprg=par\ -w50
+
+
+
 """""""""""""""""""""""""""""""""
 " Basics
 """""""""""""""""""""""""""""""""
 set nocompatible
 
+if has("autocmd")
+endif
 
 """""""""""""""""""""""""""""""""
 " http://nvie.com/posts/how-i-boosted-my-vim/
@@ -52,7 +63,7 @@ set noswapfile
 set list
 " set listchars=tab:>.,trail:.,extends:#,nbsp:.
 " set listchars=tab:˲ˍ,trail:˽,nbsp:˽,eol:¶
-set listchars=tab:▸\ ,eol:¬,trail:˽,nbsp:˽
+set listchars=tab:▸\ ,eol:¬ ",trail:˽,nbsp:˽
 map <leader>l :set list!<CR>
 
 " prevent 'smart'-indentation on demand (think paste as plain text)
