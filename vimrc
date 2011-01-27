@@ -9,14 +9,24 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+" enable matchit by hand
+runtime macros/matchit.vim
+
+" simple notetaking, best synchronized with dropbox
+" inspired from http://ktuman.blogspot.com/2010/06/ubiquitous-note-taking-with-vim-and.html
+
+" map <leader>nn :tabedit ~/Dropbox/Notes/
 
 
 """""""""""""""""""""""""""""""""
-" NEW 
+" from vimcasts.org
 """"""""""""""""""""""""""""""""""
-set formatprg=par\ -w50
+command! -nargs=* Wrap set wrap linebreak nolist
 
+set formatprg=par\ -w72
 
+" open edit from the same directory as the current buffer
+map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 
 """""""""""""""""""""""""""""""""
 " Basics
